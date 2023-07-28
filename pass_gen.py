@@ -1,4 +1,3 @@
-
 def generate(length,
              lower: bool = None,
              upper: bool = None,
@@ -68,7 +67,4 @@ def checker(password):
 
     return length, digits, uppercase, lowercase, symbol 
 
-print(list(checker("3eqfZk,G|;<KZo-k")))
-#print(f'{lower = }')
-#print(f'{upper = }')
 
