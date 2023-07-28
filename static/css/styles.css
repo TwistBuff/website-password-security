@@ -1,0 +1,107 @@
+#title {
+  
+  display: flex;
+  justify-content: left;
+   
+}
+
+#pass-title {
+  display: flex;
+  justify-content: center;
+}
+
+#new-password {
+  display: flex;
+  justify-content: center;
+}
+
+#box1 {
+  background-color: rgb(39, 39, 39);
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+}
+
+#required {
+  font-family: 'Roboto', sans-serif;
+  color: azure;
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+}
+
+#separator {
+  width: max-content;
+  height: 300px;
+  color: brown;
+  border: none;
+  padding-top: 19px;
+  padding-bottom: 1px;
+}
+
+#link-button {
+  display: flex;
+  justify-content: center;
+}
+
+#poor-p {
+  font-family: 'Roboto', sans-serif;
+  color: azure;
+}
+
+.element {
+  display: inline-block;
+  width: 300px;
+  
+}
+
+.container {
+  display: flex;
+}
+
+.copy-text {
+  font-family: 'Roboto', sans-serif;
+  color: rgb(15, 15, 15);
+  background-color: azure;
+  border: none;
+  padding: 10px 20px; /* Adjust the padding to change button size */
+  border-radius: 8px; /* Add rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.copy-text:hover {
+  background-color: #740000; /* Change the background color on hover */
+}
+
+
+h1 , h2{
+  font-family: Arial, Helvetica, sans-serif;
+  color: azure;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  color: azure;
+}
+
+body {
+  background-color:rgb(15, 15, 15);
+  margin: 20px;
+}
+
+
+
+
+
+label {
+  font-family: 'Roboto', sans-serif;
+  color: azure;
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+  color:rgb(15, 15, 15);
+  background-color: azure;
+}
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='scripts/scripts.js')}}"></script> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image" href="{{ url_for('static', filename='icon.jpg')}}">
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <div id="title">
+        <h2>Password Generator</h2>
+    </div>
+
+    <div id="container">
+        <div id="box1" class="element">
+            <div id="pass-title">
+                <h2>New password : </h2>
+            </div>  
+            <div id="new-password">
+                <p>{{output}}</p>
+            </div>
+        </div>
+
+        <div id="required" class="element">
+            <p>The passowrd requirements that are met: </p>
+            <ul>
+                <li>8 characters length or more : {{length}} </li>
+                <li>1 digit or more : {{digits}} </li>
+                <li>1 symbol or more : {{symbol}}</li>
+                <li>1 uppercase or more : {{uppercase}}</li>
+                <li>1 lowercase or more : {{lowercase}}</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div>
+        <button class="copy-text" id="btn" onclick="copy_button()">Copy Text</button>
+    </div>
+
+    <br>
+    <p>Take the security test
+    </p> 
+    <div>
+        <p><b>Tip:</b> Avoid the use of dictionary words or common names, and avoid using any personal information</p>
+        <form action="/process_form", method="POST">
+            <label for="password">Enter your password here:</label>
+            <input type="text" id="password" name="password" required><br>
+        </form>
+    </div>
+
+    <hr>
+    <div id="separtor">
+        <h2>Do you want to find out more about password best practices, cyber risks, and the most common mistake people do when creating password?</h2>
+        
+        <button class="copy-text" id="link-button" onclick="pagebutton()">Find out by clicking here</button>
+    </div>
+    <hr>
+
+    <h1>The Most Common Poor Password Practices</h1>
+    <div id="poor-p">
+        <ul>
+            <li>Create Easy Passwords (ex. qwerty)</li>
+            <li>Reuse Passwords</li>
+            <li>Sharing Passwords Insecurely</li>
+            <li>Writing Passwords Down, or Storing on Spreadsheets or on your Phone</li>
+            <li>Skip Adopting MFA</li>
+            <li>Letting Browsers Save Your Passwords</li>
+        </ul>
+    </div>
+
+    <hr>
+    <h1>Strong Passwords Tips and Tricks</h1>
+    <hr>
+
+    <h2>Common mistakes and misconceptions</h2>
+    <div id="poor-p">    
+        <ul>
+            <li>Replacing letters with digits and symbols. This technique is well known to hackers so swapping an “E” for a “3” or a “5” for a “$” doesn't make you much more secure</li>
+            <li>That meeting the minimum requirements for a password makes it strong. By today's standards, an 8-character password won't make you very secure</li>
+            <li>That it's fine to use the same password a lot as long as it's strong - what if the website is hacked? Do you know how the website stores your password? What if they store it in plaintext?</li>
+        </ul>
+    </div>
+
+    <H2>Guilty</H2>
+    <div id="poor-p">
+        <ul>
+            <li>Weak practices - storing passwords in the notes field on your phone, does it auto sync to the cloud, iCloud or Dropbox</li>
+            <li>Putting them in a spreadsheet, even password protecting a spreadsheet doesn't keep the information safe.</li>
+        </ul>
+    </div>
+
+    <h2>What makes a strong password?</h2>
+    <p>A strong password is one that's either not easily guessed or not easily brute forced. To make it not easily guessed it can't 
+        be a simple word, to make it not easily cracked it needs to be long and complex. Super computers can go through billions
+         of attempts per second to guess a password. Try to make your passwords a minimum of 14 characters.</p>
+
+
+    <h2>Passphrase</h2>
+    <p>A passphrase is simply a password, that's longer, it could be a sentence,
+         with spaces and punctuation in it. The benefit of a passphrase is that typically they're
+          easier to remember, but more difficult to crack due to their length. 
+          For every additional character in the length of a password or passphrase, 
+          the time it would take to break increases exponentially. Ultimately 
+          that means that having a long password or passphrase can make you far more 
+          secure than having a short one with some symbols or numbers in it. </p>
+</body>
+</html>
